@@ -1,0 +1,26 @@
+[32m[2020-07-21T17:59:53.815] [INFO] json-test - [39mOPTIONS/api/getImgs
+[0mOPTIONS /api/getImgs [32m200 [0m3.985 ms - 4[0m
+conn_ { user_name: 'admin',
+  user_id: 1,
+  iat: 1595309377,
+  exp: 1595395777 }
+[32m[2020-07-21T17:59:53.923] [INFO] json-test - [39mPOST/api/getImgs
+[0mPOST /api/getImgs [32m200 [0m19.313 ms - 221[0m
+conn_ { user_name: 'admin',
+  user_id: 1,
+  iat: 1595309377,
+  exp: 1595395777 }
+[32m[2020-07-21T17:59:58.134] [INFO] json-test - [39mPOST/api/getImgs
+[0mPOST /api/getImgs [32m200 [0m1.619 ms - 221[0m
+[32m[2020-07-21T18:00:24.751] [INFO] json-test - [39mOPTIONS/register
+[0mOPTIONS /register [32m200 [0m0.304 ms - 4[0m
+[32m[2020-07-21T18:00:24.813] [INFO] json-test - [39mPOST/register
+[0mPOST /register [32m200 [0m4.635 ms - 38[0m
+[32m[2020-07-21T18:00:33.146] [INFO] json-test - [39mOPTIONS/api/getImgs
+[0mOPTIONS /api/getImgs [32m200 [0m0.340 ms - 4[0m
+conn_ { user_name: 'admin',
+  user_id: 1,
+  iat: 1595309377,
+  exp: 1595395777 }
+[32m[2020-07-21T18:00:33.206] [INFO] json-test - [39mPOST/api/getImgs
+[0mPOST /api/getImgs [32m200 [0m1.315 ms - 221[0m
