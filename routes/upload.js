@@ -12,7 +12,7 @@ var common = require('../public/javascripts/common');
 var stroage = multer.diskStorage({
     //设置上传的文件夹
     destination: function (req, file, cd) {
-        cd(null, './public/images')
+        cd(null, './public/images') //注意是根目录，根目录，根目录
     },
     filename: function (req, file, cb) {
         //设置图片的名称
@@ -23,7 +23,7 @@ var upload = multer({ storage: stroage });
 
 router.post('/api/upload', upload.any(), function (req, res, next) {
     console.log(req.files)
-    let url = `http://localhost:3000/images/${req.files[0].filename}`
+    let url = `http://${req.headers,host}/images/${req.files[0].filename}`
     if (!req.files) {
         return res.json({
             code: 1,
