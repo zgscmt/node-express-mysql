@@ -12,7 +12,7 @@ var common = require('../public/javascripts/common');
 var stroage = multer.diskStorage({
     //设置上传的文件夹
     destination: function (req, file, cd) {
-        cd(null, './public/images')
+        cd(null, './public/images') //注意是根目录，根目录，根目录
     },
     filename: function (req, file, cb) {
         //设置图片的名称
