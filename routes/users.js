@@ -35,7 +35,7 @@ router.post('/login', function (req, res) {
                     })
                 }
                 else {
-                    connection.query(sqlobj.sqls.loginUsers, function (err, data) {
+                    connection.query(sqlobj.sqls.loginUser, function (err, data) {
                         if (err) {
                             throw err;
                         } else {
