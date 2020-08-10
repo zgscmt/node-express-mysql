@@ -46,25 +46,28 @@ router.post('/login', function (req, res) {
                                 } else {
                                     if (data.length === 0) {
                                         return res.json({
-                                            result: 0,
+                                            code:1,
                                             status: 200,
                                             message: '用户不存在'
                                         })
                                     } else {
                                         if (req.body.user_name === data[0].user_name && req.body.password !== data[0].password) {
                                             return res.json({
+                                                code:1,
                                                 result: 0,
                                                 status: 200,
                                                 message: "密码错误"
                                             })
                                         } else if (req.body.user_name !== data[0].user_name && req.body.password === data[0].password) {
                                             return res.json({
+                                                code:1,
                                                 result: 0,
                                                 status: 200,
                                                 message: '账户名有误'
                                             })
                                         } else {
                                             return res.json({
+                                                code:1,
                                                 result: 0,
                                                 status: 400,
                                                 message: '系统错误'
