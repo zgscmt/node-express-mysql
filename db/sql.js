@@ -5,6 +5,8 @@ var sqls = {
     //查询
     login: 'select * from user where user_name = ? and password = ?',
     //查询所有
+    //登录用户
+    loginUser:'select user_name,password from users where user_name  = ?',
     users: 'select * from user',
     //注册
     register: 'insert into user (user_id,user_name,password,create_time) value (0,?,?,?)',

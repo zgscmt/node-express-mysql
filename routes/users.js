@@ -39,24 +39,40 @@ router.post('/login', function (req, res) {
                         if (err) {
                             throw err;
                         } else {
-                            data.some(function (item, index) {
-                                if (item.user_name === params[0] && item.password != params[1]) {
-                                    return res.json({
-                                        code: 1,
-                                        message: '密码错误'
-                                    })
-
-                                } else if (item.password == params[1] && item.user_name !== params[0]) {
-                                    return res.json({
-                                        code: 1,
-                                        message: '用户名错误'
-                                    })
+                            let login_params = [req.body.user_name]
+                            connection.query(sqlobj.sqls.users, login_params, function (err, data) {
+                                if (err) {
+                                    throw err;
                                 } else {
-                                    return res.json({
-                                        code: 1,
-                                        message: '用户不存在'
-                                    })
+                                    if (data.length === 0) {
+                                        return res.json({
+                                            result: 0,
+                                            status: 200,
+                                            message: '用户不存在'
+                                        })
+                                    } else {
+                                        if (req.body.user_name === data[0].user_name && req.body.password !== data[0].password) {
+                                            return res.json({
+                                                result: 0,
+                                                status: 200,
+                                                message: "密码错误"
+                                            })
+                                        } else if (req.body.user_name !== data[0].user_name && req.body.password === data[0].password) {
+                                            return res.json({
+                                                result: 0,
+                                                status: 200,
+                                                message: '账户名有误'
+                                            })
+                                        } else {
+                                            return res.json({
+                                                result: 0,
+                                                status: 400,
+                                                message: '系统错误'
+                                            })
+                                        }
+                                    }
                                 }
+
                             })
                         }
                     })
