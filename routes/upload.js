@@ -23,7 +23,7 @@ var upload = multer({ storage: stroage });
 
 router.post('/api/upload', upload.any(), function (req, res, next) {
     console.log(req.files)
-    let url = `http://localhost:3000/images/${req.files[0].filename}`
+    let url = `http://${req.headers.host}/images/${req.files[0].filename}`
     if (!req.files) {
         return res.json({
             code: 1,

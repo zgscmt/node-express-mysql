@@ -6,7 +6,6 @@ var connection = require('../db/db_conn');
 
 //引入token 
 var vertoken = require('../token/token');
-const { param } = require('.');
 
 /* user login. */
 router.post('/login', function (req, res) {

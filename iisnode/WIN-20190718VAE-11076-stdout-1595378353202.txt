@@ -1,8 +1,0 @@
-[32m[2020-07-22T08:39:14.144] [INFO] json-test - [39mOPTIONS/api/getImgs
-[0mOPTIONS /api/getImgs [32m200 [0m3.431 ms - 4[0m
-conn_ { user_name: 'admin',
-  user_id: 1,
-  iat: 1595309377,
-  exp: 1595395777 }
-[32m[2020-07-22T08:39:15.274] [INFO] json-test - [39mPOST/api/getImgs
-[0mPOST /api/getImgs [32m200 [0m30.458 ms - 221[0m
