@@ -15,7 +15,7 @@
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
     "jsonwebtoken": "^8.5.1",
-    "log4js": "^6.3.0",
+    "log4js": "^6.4.0",
     "mddir": "^1.1.1",
     "moment": "^2.27.0",
     "morgan": "~1.9.1",
